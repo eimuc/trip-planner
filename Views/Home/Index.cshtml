@@ -1,0 +1,38 @@
+﻿@model TripModel
+@{
+    ViewData["Title"] = "";
+}
+<div class="card">
+    <h3 class="text-center mb-4">Planuoji keliauti pėsčiomis?</h3>
+    <form asp-controller="Home" asp-action="Post" method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-5">
+                    <label id="result" for="customRange">Atstumas: <b></b>km</label>
+                </div>
+                <div class="col-7">
+                    <input asp-for="@Model.Distance" type="range" min="10" max="500" step="10" class="custom-range" id="customRange">
+                </div>
+                <span asp-validation-for="@Model.Distance" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-5">
+                    <label>Sezonas:</label>
+                </div>
+                <div class="col-7">
+                    <select asp-for="@Model.Season" class="form-select selectpicker">
+                        <option value="Nepasirinktas" selected>Pasirinkite metų laiką</option>
+                        <option value="Pavasaris">Pavasaris</option>
+                        <option value="Vasara">Vasara</option>
+                        <option value="Ruduo">Ruduo</option>
+                        <option value="Žiema">Žiema</option>
+                    </select>
+                </div>
+                <span asp-validation-for="@Model.Season" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="col-12 btn btn-primary mt-2">Žygiuojam!</button>
+    </form>
+</div>

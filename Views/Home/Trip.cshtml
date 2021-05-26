@@ -1,0 +1,54 @@
+﻿@model TripModel
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="card w-75 h-75">
+    <div class="row">
+        <div class="col-4">
+            <h6 class="text-muted text-center mt-1">Atstumas: <b>@Model.Distance km</b></h6>
+        </div>
+        <div class="col-4">
+            <h6 class="text-muted text-center mt-1">Sezonas: <b>@Model.Season</b></h6>
+        </div>
+        <div class="col-4 text-center">
+            <a class="btn btn-primary" href="./">Įvesti iš naujo</a>
+        </div>
+    </div>
+        <h2 class="mt-lg-5">Daiktų sąrašas:</h2>
+        <ul class="list-group list-group-horizontal d-flex flex-wrap">
+            <li class="list-group-item">Patogi turistinė kuprinė</li>
+            <li class="list-group-item">Maistas ir gėrimai</li>
+            <li class="list-group-item">Žibintuvėlis</li>
+            @if (Model.Distance > 80)
+            {
+                <li class="list-group-item">Palapinė, miegmaišis ir kilimėlis</li>
+                <li class="list-group-item">Atsarginiai drabužiai</li>
+                <li class="list-group-item">Pirmosios pagalbos vaistinėlė</li>
+                <li class="list-group-item">Higienos reikmenys</li>
+                <li class="list-group-item">Peilis, puodelis, dubenėlis</li>
+            }
+
+            @if (Model.Distance > 200)
+            {
+                <li class="list-group-item">Išorinė nešiojama baterija (angl. Power bank)</li>
+                <li class="list-group-item">Turistinis šaldytuvas arba šaltkrepšis</li>
+                <li class="list-group-item">Kirvukas, pjūklelis</li>
+                <li class="list-group-item">Druska, cukrus, arbatžolės</li>
+
+            }
+            @if (Model.Season == "Vasara")
+            {
+                <li class="list-group-item">Apsaugos nuo vabzdžių</li>
+                <li class="list-group-item">Apsauga nuo saulės ir galvos apdangalas</li>
+            }
+            @if (Model.Season == "Žiema")
+            {
+                <li class="list-group-item">Neperšlampantys rūbai</li>
+            }
+            else if (Model.Season == "Žiema" || Model.Season == "Pavasaris" || Model.Season == "Ruduo")
+            {
+                <li class="list-group-item">Vandeniui atsparus dėklas technikai ir dokumentams</li>
+            }
+        </ul>  
+</div>
