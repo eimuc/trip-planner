@@ -1,7 +1,6 @@
 # Trip Planner
-ASP.NET Core Wev App (MVC) application for tietoEVRY summer academy/internship.
+ASP.NET Core Wev App (MVC) aplikacija, rekomenduojanti daiktų sąrašą žygiui pėsčiomis, atsižvelgiant į planuojamus nueiti kilometrus ir sezono laiką.
 
-## Aplikacija rekomenduojanti daiktų sąrašą žygiui pėsčiomis, atsižvelgiant į planuojamus nueiti kilometrus ir sezono laiką.
+![screenshot1](https://github.com/eimuc/trip-planner/blob/master/wwwroot/images/scr1.jpg)
 
-
-https://github.com/eimuc/trip-planner/blob/master/wwwroot/images/scr1.jpg
+![screenshot1](https://github.com/eimuc/trip-planner/blob/master/wwwroot/images/scr2.jpg)
