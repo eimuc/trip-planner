@@ -3,7 +3,7 @@ ASP.NET Core Web App (MVC) aplikacija, rekomenduojanti daiktų sąrašą žygiui
 
 Nuoroda - [Live DEMO](https://tietoevry-task.herokuapp.com/)
 
-## Screenshots
+### Screenshots
 
 ![screenshot1](https://github.com/eimuc/trip-planner/blob/master/wwwroot/images/scr1.jpg)
 
